@@ -1,9 +1,6 @@
 import { useMemo, useState } from "react";
 import Input from "../../ui/Input/Input";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import { ImFacebook2 } from "react-icons/im";
-import { FcGoogle } from "react-icons/fc";
-import { GrApple } from "react-icons/gr";
 import Button from "../../ui/Button/Button";
 import { toast } from "react-hot-toast";
 import LoginForm from "../../ui/form/LoginForm";
@@ -69,7 +66,7 @@ const Signup = () => {
     return "Back";
   }, [step]);
 
-  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (data:any) => {
     if (step !== STEPS.PASSWORD) {
       onNext();
     }
